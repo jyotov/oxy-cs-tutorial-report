@@ -1,0 +1,120 @@
+\documentclass[10pt,twocolumn]{article}
+
+% use the oxycomps style file
+\usepackage{oxycomps}
+
+% usage: \fixme[comments describing issue]{text to be fixed}
+% define \fixme as not doing anything special
+\newcommand{\fixme}[2][]{#2}
+% overwrite it so it shows up as red
+\renewcommand{\fixme}[2][]{\textcolor{red}{#2}}
+% overwrite it again so related text shows as footnotes
+%\renewcommand{\fixme}[2][]{\textcolor{red}{#2\footnote{#1}}}
+
+% read references.bib for the bibtex data
+\bibliography{references}
+
+% include metadata in the generated pdf file
+\pdfinfo{
+    /Title (College Students' Experiences and Goals with Computer Programming)
+    /Author (Julianne Yotov)
+}
+
+% set the title and author information
+\title{College Students' Experiences and Goals with Computer Programming}
+\author{Julianne Yotov}
+\affiliation{Occidental College}
+\email{jyotov@oxy.edu}
+
+\begin{document}
+
+\maketitle
+
+\section{Introduction}
+My current comps project is to create a website for beginners to computer programming and coding that offers a variety of coding exercises and projects through which they can learn foundational coding skills. This website would combine elements of existing educational computer science resources in order to be a comprehensive tool for beginners. Specifically, this website would incorporate short articles on important concepts, similar to resources like \href{https://www.geeksforgeeks.org/}{GeekforGeeks} \cite{GeeksforGeeks} and \href{https://www.w3schools.com/}{W3Schools} \cite{W3Schools}, short exercises that involve writing a single method or function, similar to \href{https://codingbat.com/java}{CodingBat} \cite{CodingBat}, and longer coding projects that often would involve creating a simple game, such as Rock Paper Scissors and Guess the Number. Through these exercises and projects, users would learn about concepts such as variable declaration, if… else statements, loops, functions and methods, arrays and/or lists, objects, classes, and inheritance. This website would ideally guide users through exercises and projects, allowing them to get hints or support throughout. The shorter exercises would also come with pre-written test cases, as in CodingBat, while also allowing users to write their own. 
+
+My initial motivation behind this project related to computer science education was largely due to my experience remotely tutoring two students in Python, a sixth grade student with some previous experience learning Python, and a high school student with no previous coding experience. From their feedback throughout our sessions, I started to gain a sense of which educational resources were effective. I sometimes started sessions by presenting a new concept, but ensured that they had the opportunity to do a lot of coding practice. Both of them enjoyed working through exercises in CodingBat and felt a sense of accomplishment from when all of the test cases would pass. They particularly enjoyed coding projects due to the fact that they could “interact” with the game afterwards or see some kind of visual output. I initially thought of designing the website for grade school students due to my positive experiences with tutoring these two students. However, I ultimately decided that this would be a resource for college students, specifically undergraduates. More specifically, this website would be a tool for non-computer science majors or minors who have to write code for a non-computer science course and need support, as well as students in introductory-level computer programming courses that would like additional practice. Before I can get started on any aspect of creating the website itself, I first felt that it was important to gain a deeper understanding of the needs of college students’ experiences and goals with computer programming. I therefore decided to follow a tutorial on creating an effective survey/questionnaire.
+
+I chose to follow a video tutorial by Sarah Doody, a user experience (UX) designer, titled “Step-by-step guide to create an effective user research survey." Doody states that surveys are an impactful way to conduct user research “early on in the process" \cite{Tutorial}. My main goal was to “ask the right questions” in my survey, which is a majority of the video tutorial. I felt that a successful outcome of creating the survey would be to get at least five responses; due to the time constraint on receiving responses, I was not able to send multiple rounds of reminders to complete the survey. Even getting this small number of responses would allow me to get an idea of some students’ experiences with computer programming and understand how to create a better survey when I ultimately conduct more user research.
+
+
+\section{Methods}
+
+According to Doody, “The goal [of creating the survey] is to understand people’s current state, problems, and desired change. Understanding this starts with asking the right people the right questions.” Additionally, Doody emphasizes that “the quality of the answers that you get back is directly related to the quality of the questions you ask.” The process of writing questions starts with considering \cite{Tutorial}:
+\begin{itemize}
+    \item{Where people are today}
+    \item{Obstacles that stop them}
+    \item{Where they want to be}
+\end{itemize}
+While the purpose of Doody’s survey discussed in the tutorial is to better understand how to market a book she wrote to her prospective audience, she emphasizes that the user research principles that she utilizes can be applied to surveys on many different topics. Many of the questions I ultimately wrote pertained to the understanding where students are today, which involved asking about their previous experiences with computer programming in high school and/or college, and whether they want to learn foundational coding skills or continue building on their existing coding skills in the future. The ultimate goal of my project would be to help them overcome the obstacles that may be keeping them from achieving their goals related to computer programming.  
+ 
+I chose to break my \href{https://forms.gle/5nDPNGqh9LwYLMVQ6}{survey} into two main sections: High School and College Computer Science Experience and Computer Programming Challenges and Future Goals. I mainly used the content of Doody’s tutorial when constructing the second section, but the first section was modeled based on Doody’s emphasis on the importance of understanding people’s current reality, which for the purposes of this survey involved asking questions about students’ previous and current exposure to coding and computer programming.
+
+\subsection{Section I: High School and College Computer Science Experience}
+
+The first section of the survey contained six multiple choice and short answer questions:
+ \begin{itemize}
+    \item{Were there any computer science classes offered at your high school? (Required)}
+    \item{If so, did you take one or more computer science classes in high school?}
+    \item{Have you taken and/or are you currently taking any computer science courses at Oxy? (Required)}
+    \item{If so, which computer science course(s) have you taken and/or are you currently taking?}
+    \item{For non-seniors: Do you plan on taking any (additional) computer science courses in your remaining time at Oxy?}
+    \item{Have you ever had to write code in a non-computer science course at Oxy? If so, which one(s)?}
+\end{itemize}
+
+I chose to ask the first two questions in order to collect data on college students’ exposure to computer science in high school. According to a proposed bill by California State Superintendent Tony Thurmond and Assemblymember Marc Berman that would “require every public high school [in California] to teach computer science and establish computer science as a high school graduation requirement… Fifty-five percent of high schools in California do not offer a single course in computer science [and] Just 5 percent of the 1,930,000 high school pupils in California are enrolled in a computer science course” \cite{Bill}. This suggests that many college students may have had no opportunities to take a computer science class in high school and that a majority of students who did go to a high school with at least one computer science class did not enroll in it. 
+
+My next three questions were simply designed to survey whether students have taken or are currently taking at least one computer science course at Oxy. These questions would allow me to collect data on the number of non-computer science majors or minors who take computer science courses, as well as which courses they take. In a future survey, I would potentially consider asking these students for their motivation behind taking a computer science course. A significant percentage of non-computer science majors or minors taking at least one computer science course during their undergraduate education may suggest that students either feel that some basic computer programming and coding knowledge would be helpful in their chosen area(s) of study. 
+
+Finally, the purpose of my last question in this section was to get a better understanding of the various non-computer science courses that may require students to code. If an introductory computer programming course is not a prerequisite for some of these courses, it may be the case that students who did not take a computer programming class in high school are going into these courses with no previous coding experience. This could pose a significant educational challenge, especially if they were not expecting to have to code in the course and do not know which resources to utilize to learn some foundational coding concepts. Since I am particularly interested in creating my website for students in this situation, I felt that it was imperative to understand how many departments could offer courses that require students to code in some capacity.
+
+\subsection{Section II: Computer Programming Challenges and Future Goals}
+In the second section of my survey, I aimed to incorporate Doody’s user research principles and model the structure of some of my questions after her own. My first question was “If you have taken and/or are you currently taking any course that requires coding (including non-computer science courses), what resources have you utilized when experiencing challenges?” My aim with this question was to address what Doody calls the “obstacles” that stop people from achieving their goals. In this case, I did not focus on the obstacles themselves, but rather on the approaches that students may have taken in the past to overcome them. I was interested in this because I hope that my website will be a resource that students can utilize when experiencing challenges with computer programming. The options that students could select from (multiple options could be selected) when completing the survey were:
+ \begin{itemize}
+    \item{Going to a professor's office hours}
+    \item{Going to some form of tutoring (such as peer tutoring or SSAP)}
+    \item{Collaborating with someone else taking the course}
+    \item{Online platforms (such as Codeacademy, GeeksforGeeks, LeetCode, etc.)}
+    \item{Video tutorials}
+    \item{ChatGPT}
+    \item{None of the above}
+    \item{Other}
+\end{itemize}
+I was primarily interested in seeing how many students utilized online platforms, since my website would incorporate elements of existing online platforms to specifically cater to college students taking courses that involve some level of coding. I then included a space for students to reflect on the effectiveness or ineffectiveness of the resources that they utilized. Doody phrased many of her prompts in first-person, such as “The last time I felt X was when…” in order to discourage respondents from providing a “hypothetical response” and instead have them reflect on their experiences \cite{Tutorial}. I phrased mine as “I feel that the resources that I have utilized have been effective/ineffective in helping me overcome my challenges because…” Unlike Doody, I chose to make this (as well as my other) open-ended prompts optional, as I felt that making them required could discourage some students from completing the survey due to the time commitment. 
+
+I finished the survey by having respondents rate their agreement to two statements on a scale of one to five. This was not something in the tutorial, and I chose to include these two statements in order to obtain some quantitative data. The first of these statements was: “It is important for everyone to have some basic coding knowledge, regardless of the field that they choose to pursue.” In this case, one indicated that the respondent strongly disagreed with the statement, while five indicated that they strongly agreed with it. I chose to have respondents consider this statement in order to gain insight into college students’ perceptions about the importance of coding knowledge. If respondents generally agreed with the statement, I would interpret that as indicative of the fact that college students across a variety of disciplines feel that coding knowledge is generally important for all fields of study. The second statement was: “I would like to learn some foundational coding skills OR I would like to continue building on my existing coding skills in the future.” For this statement, one indicated that they would definitely not like to learn some coding skills or continue building on their existing skills, while five indicated that they definitely would like to. I chose this statement in order to obtain data on students’ future goals relating to computer programming, or as Doody puts it, “where they want to be.” Selections of three, four, or five to this statement likely indicate that the student intends to study or continue studying computer programming in some capacity in the future. Since my website would be one resource that students relatively new to computer programming could utilize, I was particularly interested in seeing how many students with minimal previous computer programming experience would indicate that they hope to build on their coding skills in the future. Following both of these statements, I included an open-ended prompt allowing students to explain their rating: “I feel this way because…” Despite the fact that I wanted some quantitative data, I felt that it was important to give students the opportunity to explain their rating and reflect on their thoughts, as Doody demonstrates with her open-ended prompts in the tutorial.
+
+\section{Metrics and Results}
+
+Seven students (one first-year, three juniors, and three seniors) completed the survey, which met my goals of having at least five respondents. The students’ majors were: Cognitive Science, Economics, Physics (two students), Media Arts and Culture, Psychology, Computer Science, and Sociology. All students indicated that there was at least one computer science class offered at their high school, and two students indicated that they took at least one computer science class in high school (one student did not respond to this question, while four indicated that they did not). Four students have taken or are currently taking at least one computer science course. Of the four non-seniors, two indicated that they may take a computer science course in their remaining time in college, while one indicated that they would not; the final student is a Computer Science major and will therefore take more courses in the department. Respondents indicated  that certain courses in Cognitive Science, Economics, Media Arts and Culture, and Physics have required some amount of coding. 
+
+Out of the resources that one could utilize when experiencing challenges in courses that require coding, four students indicated that they have gone to a professor's office hours, collaborated with someone else taking the course, utilized online platforms, and watched video tutorials. Three students indicated that they have gone to some form of tutoring, two have used ChatGPT, and one has not used any of the resources listed. The results of the two statements where students were asked to rate their agreement are shown in Table 1. Overall, the responses indicate that students are interested in learning foundational coding skills or continuing to build on their existing skills. I feel that this is meaningful data, as it suggests that my website could be one tool that students who are still learning the fundamentals of computer programming can make use of.
+
+
+
+\begin{table}
+    \footnotesize
+    \begin{tabular}{r|cl}
+        \textbf{Rating} & \textbf{Statement 1} &  \textbf{Statement 2} \\
+        \hline \\
+        \textbf{1} &  0 students &  0 students  \\
+        \textbf{2} &  0 students &  1 student   \\
+        \textbf{3} &  3 students &  1 student   \\
+        \textbf{4} &  3 students &  4 students  \\
+        \textbf{5} &  1 student  &  1 student   \\
+    \end{tabular}
+    \caption{Students' ratings to two statements in the survey}
+    \label{tbl:timeline}
+\end{table}
+
+While I met my goal of receiving at least five responses, not many students responded to the optional open-ended prompts; two students expanded on the resources that they found effective or ineffective, two students explained their rating to the first statement, and one student explained their rating to the second statement. Since the phrasing of these prompts was a large focus when I was creating the survey, I feel that I did not succeed in this sense; I did not receive enough responses to these prompts. When conducting user research in the future for this project, I will either make these open-ended prompts required while also emphasizing that respondents can write just one or two sentences and/or conduct interviews with students. I could also include a place at the end of the survey for respondents to share their feedback on the format and phrasing, as this would be another way for me to measure whether I have accomplished my goals when creating the survey. 
+
+\section{Reflection}
+
+I found the tutorial helpful in gaining insight into how to conduct user research via a survey. I appreciated that the example survey in the tutorial was on a completely different topic, as I had a guideline to work on while still having some creative freedom in the questions I asked and how I phrased them. In the future, I may also consult tutorials on creating surveys for the intended users of a website or app, as this may help me ensure that I am asking the appropriate questions. I feel that I learned a lot from this tutorial, as I have never had to conduct user research in the past. This survey was unlike any other response form that I have created in the past, and it was an exciting challenge to undertake the process.
+
+While I am passionate about my current project idea, I still am not completely sure if it is what I ultimately want to do. I am concerned about the process of creating the website itself. I have never worked on a computer science project of this scale, and I do not currently know how to get started with the process of building the website. It was relatively easy for me to provide live feedback to the students that I tutored when they needed help finding errors in their code, but I do not feel that I have the knowledge to incorporate this kind of feedback into the coding exercises and projects. I will certainly need to continue conducting user research on a much larger scale than I did in this survey, including students at other universities. The responses of the seven students that were surveyed may not necessarily be representative of all Occidental students’ experiences with computer programming, and they certainly do not encompass all college students’ experiences. Therefore, this survey was only my very first attempt at user research, and there is still a lot more that I need to do if I continue pursuing this project.
+
+\printbibliography
+
+\end{document}
